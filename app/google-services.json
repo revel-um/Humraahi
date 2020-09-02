@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "113585734063",
+    "firebase_url": "https://humraahi-9f42d.firebaseio.com",
+    "project_id": "humraahi-9f42d",
+    "storage_bucket": "humraahi-9f42d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113585734063:android:db467682d1283c2848ef5a",
+        "android_client_info": {
+          "package_name": "com.revel.humraahi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113585734063-ul6sv9ghvuvrjldp9ofm9k8c79t3e1ut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZylVVYfwKn1Np0PeXULm96Ac6F-B-GWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113585734063-ul6sv9ghvuvrjldp9ofm9k8c79t3e1ut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

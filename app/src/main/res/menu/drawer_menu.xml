@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/humraahi"
+            android:icon="@drawable/ic_heart_red"
+            android:title="Nearby Humraahi" />
+        <item
+            android:id="@+id/open"
+            android:icon="@drawable/ic_openaccounts"
+            android:title="All accounts" />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_profile"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
+    </group>
+</menu>

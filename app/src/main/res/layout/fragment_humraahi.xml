@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HumraahiFragment">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:overScrollMode="never" />
+
+    <TextView
+        android:id="@+id/textHumraahi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No one is nearby"
+        android:textAlignment="center"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/viewProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginRight="120dp"
+        android:background="@drawable/custom_btn"
+        android:text="view profile"
+        android:visibility="gone" />
+</RelativeLayout>

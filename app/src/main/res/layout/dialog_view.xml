@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <ImageView
+            android:id="@+id/dialogImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="New user" />
+
+        <EditText
+            android:id="@+id/EditUsername"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Username" />
+
+        <TextView
+            android:id="@+id/TextGender"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="X" />
+
+        <AutoCompleteTextView
+            android:id="@+id/EditGender"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Gender" />
+
+        <AutoCompleteTextView
+            android:id="@+id/TextPreference"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="New user" />
+
+        <EditText
+            android:id="@+id/EditPreference"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Preference" />
+    </LinearLayout>
+
+</LinearLayout>
