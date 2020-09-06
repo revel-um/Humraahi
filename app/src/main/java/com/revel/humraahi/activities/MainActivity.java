@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         startFinding.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (un != null && gender != null && preference != null) {
+       
                     gps_enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
                     if (!gps_enabled) {
                         Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
@@ -181,44 +181,6 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, DrawerActivityJava.class)
                                 .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION));
                     }
-                } else {
-                    AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-                    final EditText input = new EditText(MainActivity.this);
-                    input.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-                    input.setHint("Write your username here");
-                    View v = getLayoutInflater().inflate(R.layout.dialog_view, null, false);
-                    ImageView dialogImage = v.findViewById(R.id.dialogImage);
-                    EditText dialogEdUser, dialogEdGen, dialogEdPref;
-                    TextView dialogTvUser, dialogTvGen, dialogTvPref;
-                    dialogEdUser = v.findViewById(R.id.EditUsername);
-                    dialogEdGen = v.findViewById(R.id.EditGender);
-                    dialogEdPref = v.findViewById(R.id.EditPreference);
-                    dialog.setView(v);
-                    dialog.setTitle("Give some information");
-                    dialog.setIcon(R.drawable.dialogimage);
-                    dialog.setPositiveButton("Set", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            if (input.getText().toString().trim().isEmpty()) {
-                                Toast.makeText(MainActivity.this, "username can't be blank", Toast.LENGTH_SHORT).show();
-                            } else {
-                                String username = input.getText().toString();
-                                SharedPreferences sp = getSharedPreferences("username", MODE_PRIVATE);
-                                SharedPreferences.Editor editor = sp.edit();
-                                editor.putString("username", username);
-                                editor.apply();
-                                MainActivity.this.username.setText(username);
-                                DatabaseReference mRef = FirebaseDatabase.getInstance().getReference("Username");
-                                mRef.child(FirebaseAuth.getInstance().getCurrentUser().getEmail().replace(".", "_")).setValue(username);
-                            }
-                        }
-                    }).setNegativeButton("Later", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-
-                        }
-                    }).create().show();
-                }
             }
         });
 
